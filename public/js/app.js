@@ -51,6 +51,21 @@ const updateUI = async () => {
 
     document.getElementById("btn-logout").disabled = !isAuthenticated;
     document.getElementById("btn-login").disabled = isAuthenticated;
+
+    if (isAuthenticated) {
+        document.getElementById("gated-content").classList.remove("hidden");
+    
+        document.getElementById(
+          "ipt-access-token"
+        ).innerHTML = await auth0Client.getTokenSilently();
+    
+        document.getElementById("ipt-user-profile").textContent = JSON.stringify(
+          await auth0Client.getUser()
+        );
+    
+    } else {
+        document.getElementById("gated-content").classList.add("hidden");
+    }
 }
 
 const login = async () => {

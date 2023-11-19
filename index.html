@@ -10,34 +10,33 @@
         <h1>Login here</h1>
         <button id="btn-login" disabled="true" onclick="login()">Log in</button>
         <button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
-
-
-
-        <h1>Pizza input screen</h1>
-        <div class="input-block">
-            <div class="field-line input-line">
-                <h3 class="descriptor input-descriptor">Order:</h3>
-                <input type="number" id="pizza-order" step="1" min="0"></input>
+        <div class ="hidden">
+            <h1>Pizza input screen</h1>
+            <div class="input-block">
+                <div class="field-line input-line">
+                    <h3 class="descriptor input-descriptor">Order:</h3>
+                    <input type="number" id="pizza-order" step="1" min="0"></input>
+                </div>
+                <div class="field-line input-line">
+                    <h3 class="descriptor input-descriptor">Pizza name:</h3>
+                    <input type="text" id="pizza-name"></input>
+                </div>
+                <div class="field-line input-line">
+                    <h3 class="descriptor input-descriptor">Price:</h3>
+                    <input type="number" id="pizza-price" step="0.01" min="0"></input>
+                </div>
+                <div class="field-line textarea-line">
+                    <h3 class="descriptor textarea-descriptor">Ingredients:</h3>
+                    <textarea id="pizza-description"></textarea>
+                </div>
+                <div class="field-line textarea-line">
+                    <h3 class="descriptor textarea-descriptor">Instagram code:</h3>
+                    <textarea id="pizza-embed-code"></textarea>
+                </div>
+                <button id="upload-btn">Upload</button>
             </div>
-            <div class="field-line input-line">
-                <h3 class="descriptor input-descriptor">Pizza name:</h3>
-                <input type="text" id="pizza-name"></input>
+            <div id="current-pizzas">
             </div>
-            <div class="field-line input-line">
-                <h3 class="descriptor input-descriptor">Price:</h3>
-                <input type="number" id="pizza-price" step="0.01" min="0"></input>
-            </div>
-            <div class="field-line textarea-line">
-                <h3 class="descriptor textarea-descriptor">Ingredients:</h3>
-                <textarea id="pizza-description"></textarea>
-            </div>
-            <div class="field-line textarea-line">
-                <h3 class="descriptor textarea-descriptor">Instagram code:</h3>
-                <textarea id="pizza-embed-code"></textarea>
-            </div>
-            <button id="upload-btn">Upload</button>
-        </div>
-        <div id="current-pizzas">
         </div>
         <script src="index.js" type="module"></script>
         <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
