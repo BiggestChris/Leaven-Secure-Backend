@@ -29,14 +29,6 @@ textarea {
     width: 160px;
 }
 
-.input-descriptor {
-
-}
-
-.textarea-descriptor {
-    
-}
-
 .output-line {
     display: flex;
     height: 30px;
@@ -50,9 +42,6 @@ textarea {
 .current-item-descriptor {
     width: 150px;
     font-weight: bold;
-}
-.current-item {
-    
 }
 
 .item-code {
@@ -68,3 +57,17 @@ textarea {
 .hidden {
     display: none;
 }
+
+/*
+.input-descriptor {
+
+}
+
+.textarea-descriptor {
+    
+}
+
+.current-item {
+    
+}
+*/
