@@ -1,0 +1,66 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.field-line {
+    display: flex;
+    margin: 10px 5px;
+    align-items: center;
+}
+
+.input-line {
+    height: 25px;
+}
+
+input, textarea {
+    width: 200px;
+}
+
+.textarea-line {
+    height: 100px;
+}
+
+textarea {
+    height: 90px;
+}
+
+.descriptor {
+    width: 160px;
+}
+
+.input-descriptor {
+
+}
+
+.textarea-descriptor {
+    
+}
+
+.output-line {
+    display: flex;
+    height: 30px;
+}
+
+.id-item-descriptor {
+    font-weight: bold;
+    width: 100px;
+}
+
+.current-item-descriptor {
+    width: 150px;
+    font-weight: bold;
+}
+.current-item {
+    
+}
+
+.item-code {
+    overflow: scroll;
+    height: 100px;
+    border: 1px dashed black;
+}
+
+.indent {
+    margin-left: 50px;
+}
