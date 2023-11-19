@@ -14,6 +14,8 @@ const configureClient = async () => {
         domain: config.domain,
         clientId: config.clientId
     });
+
+    console.log("Auth0 Client Initialized:", auth0Client);
 };
 
 // ..
