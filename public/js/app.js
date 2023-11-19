@@ -33,4 +33,26 @@ window.onload = async () => {
   
     document.getElementById("btn-logout").disabled = !isAuthenticated;
     document.getElementById("btn-login").disabled = isAuthenticated;
+
+    const query = window.location.search;
+    if (query.includes("code=") && query.includes("state=")) {
+
+    // Process the login state
+        await auth0Client.handleRedirectCallback();
+        
+        updateUI();
+
+        // Use replaceState to redirect the user away and remove the querystring parameters
+        window.history.replaceState({}, document.title, "/");
+    }
+};
+
+// ..
+
+const login = async () => {
+    await auth0Client.loginWithRedirect({
+        authorizationParams: {
+            redirect_uri: window.location.origin
+        }
+    });
 };
