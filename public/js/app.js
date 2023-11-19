@@ -2,10 +2,6 @@ let auth0Client = null;
 
 // ..
 
-// Test if this script is pulling through
-
-document.getElementById("btn-logout").textContent = "Testing"
-
 
 
 const fetchAuthConfig = () => fetch("/auth_config.json");
