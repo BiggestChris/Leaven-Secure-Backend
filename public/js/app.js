@@ -25,14 +25,13 @@ window.onload = async () => {
   
     // NEW - update the UI state
     updateUI();
-};
-  
-  // NEW
-    const updateUI = async () => {
+
     const isAuthenticated = await auth0Client.isAuthenticated();
-  
-    document.getElementById("btn-logout").disabled = !isAuthenticated;
-    document.getElementById("btn-login").disabled = isAuthenticated;
+
+    if (isAuthenticated) {
+        // show the gated content
+        return;
+    }
 
     const query = window.location.search;
     if (query.includes("code=") && query.includes("state=")) {
@@ -47,7 +46,12 @@ window.onload = async () => {
     }
 };
 
-// ..
+const updateUI = async () => {
+    const isAuthenticated = await auth0Client.isAuthenticated();
+
+    document.getElementById("btn-logout").disabled = !isAuthenticated;
+    document.getElementById("btn-login").disabled = isAuthenticated;
+}
 
 const login = async () => {
     await auth0Client.loginWithRedirect({
